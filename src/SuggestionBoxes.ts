@@ -51,14 +51,6 @@ export class SuggestionBoxes {
   constructor(private readonly parent: QuillLanguageTool) {}
 
   /**
-   * Remove all suggestion boxes from the editor.
-   */
-  public removeSuggestionBoxes() {
-    this.parent.preventLoop();
-    removeSuggestionBoxes(this.parent.quill);
-  }
-
-  /**
    * Insert a suggestion box into the editor.
    *
    * This uses the matches stored in the parent class
